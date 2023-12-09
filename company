@@ -1,0 +1,33 @@
+package com.mycompany.company;
+public class Company {
+
+    public static void main(String[] args) {
+        Employee e1 = new Employee();
+        Salary s1 = new Salary("Single",0);
+        e1.setGender("male");
+        e1.setId("001122");
+        e1.setName("Aram Ali");
+        s1.Degree("Bsc");
+        
+        Employee e2 = new Employee();
+        Salary s2 = new Salary("Married",2);
+        e2.setGender("female");
+        e2.setId("112233");
+        e2.setName("Shilan Qadir");
+        s2.Degree("Msc");
+        
+        Employee e3 = new Employee();
+        Salary s3 = new Salary("Married",0);
+        e3.setGender("male");
+        e3.setId("223344");
+        e3.setName("Awat salih");
+        s3.Degree("diploma");
+        
+        System.out.println("ID          Name            Gender      Salary");
+        System.out.println("---------------------------------------------");
+        System.out.println(e1.getId()+ "      " + e1.getName() + "        " + e1.getGender()+ "       " + s1.Total_Salary());
+        System.out.println(e1.getId()+ "      " + e2.getName() + "    " + e2.getGender()+ "     " + s2.Total_Salary());
+        System.out.println(e1.getId()+ "      " + e3.getName() + "      " + e3.getGender()+ "       " + s3.Total_Salary());
+
+    }
+}
