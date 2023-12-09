@@ -1,0 +1,45 @@
+package com.mycompany.company;
+
+import java.util.Scanner;
+
+public class Salary {
+    final float Base_Salary = 500000;
+    String degree;
+    String Marital_State;
+    int No_of_Children;
+    
+    Salary(String Marital_State, int No_of_Children){
+        this.Marital_State = Marital_State;
+        this.No_of_Children = No_of_Children;
+    }
+    
+    public void Degree(String degree){
+        this.degree = degree;       
+    }
+    
+    public float Total_Salary(){
+        float Extra_Salary = Base_Salary;
+        switch(degree.toLowerCase()){
+            case "diploma":
+                Extra_Salary = (float) (Extra_Salary + (0.25*Base_Salary));
+                break;
+            case "bsc":
+                Extra_Salary = (float) (Extra_Salary + (0.45*Base_Salary));
+                break;
+            case "msc":
+                Extra_Salary = (float) (Extra_Salary + (0.75*Base_Salary));
+                break;
+            case "doctor":
+                Extra_Salary = (float) (Extra_Salary + (1*Base_Salary));
+                break;
+        }
+        if(Marital_State.equalsIgnoreCase("married")){
+            Extra_Salary = Extra_Salary + 50000;
+        }
+        if(No_of_Children != 0){
+            Extra_Salary = Extra_Salary + (10000*No_of_Children);
+        }
+        return Extra_Salary;
+    }
+    
+}
