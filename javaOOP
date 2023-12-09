@@ -1,0 +1,32 @@
+public class JavaOOP { 
+    public static void main(String[] args) {
+        
+        Rectangle rect = new Rectangle();
+        Square seq = new Square();
+        seq.width = rect.width;
+        System.out.println(rect.area(10, 5));
+        System.out.println(seq.area(seq.width));
+        
+    }
+}
+
+class Square {
+    
+    public int width;
+    
+    public int area(int w)
+    {
+        return w*w;
+    }
+}
+class Rectangle{
+    
+    public int width;
+    public int high;
+    
+    public int area(int w, int h)
+    {
+        width = w;
+        return w*h;
+    }
+}
